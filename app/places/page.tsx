@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import PlaceCard from '@/components/PlaceCard';
 import { FiSearch, FiFilter, FiMapPin, FiX } from 'react-icons/fi';
@@ -26,7 +26,7 @@ interface Category {
   slug: string;
 }
 
-export default function PlacesPage() {
+function PlacesPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [places, setPlaces] = useState<Place[]>([]);
@@ -228,5 +228,19 @@ export default function PlacesPage() {
         </div>
       </section>
     </>
+  );
+}
+
+export default function PlacesPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex min-h-[60vh] items-center justify-center bg-[#0f0f0f] text-gray-400">
+          Loading destinations...
+        </div>
+      }
+    >
+      <PlacesPageContent />
+    </Suspense>
   );
 }
