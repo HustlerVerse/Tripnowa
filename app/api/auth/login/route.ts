@@ -4,6 +4,8 @@ import User from '@/models/User';
 import bcrypt from 'bcryptjs';
 import { generateToken } from '@/lib/jwt';
 
+export const runtime = 'nodejs';
+
 export async function POST(request: NextRequest) {
   try {
     await connectDB();

@@ -3,6 +3,8 @@ import connectDB from '@/lib/mongodb';
 import Place from '@/models/Place';
 import { requireAdmin } from '@/lib/auth';
 
+export const runtime = 'nodejs';
+
 export async function POST(request: NextRequest) {
   try {
     requireAdmin(request);

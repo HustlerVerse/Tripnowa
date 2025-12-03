@@ -3,6 +3,8 @@ import connectDB from '@/lib/mongodb';
 import User from '@/models/User';
 import { verifyAuth } from '@/lib/auth';
 
+export const runtime = 'nodejs';
+
 export async function GET(request: NextRequest) {
   try {
     const auth = verifyAuth(request);

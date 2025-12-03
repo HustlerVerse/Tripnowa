@@ -12,7 +12,7 @@ import {
   FiCalendar,
   FiDollarSign,
   FiShield,
-  FiLightbulb,
+  FiInfo,
   FiCheckCircle,
   FiExternalLink,
 } from 'react-icons/fi';
@@ -180,7 +180,7 @@ export default function PlaceDetailsPage() {
               {/* Why Special */}
               <div className="glass-card p-6 sm:p-8">
                 <h3 className="font-display text-xl font-semibold mb-4 flex items-center gap-2">
-                  <FiLightbulb className="h-5 w-5 text-orange-400" />
+                  <FiInfo className="h-5 w-5 text-orange-400" />
                   Why This Place is Special
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
