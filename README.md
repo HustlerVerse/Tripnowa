@@ -66,53 +66,6 @@ A full-stack travel discovery website built with Next.js 14, TypeScript, Tailwin
 6. **Open your browser**:
    Navigate to [http://localhost:3000](http://localhost:3000)
 
-## 🗄️ Database Setup
-
-### MongoDB Atlas (Recommended for Production)
-
-1. Go to [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
-2. Create a free account and cluster
-3. Create a database user
-4. Whitelist your IP address (or use 0.0.0.0/0 for development)
-5. Get your connection string and add it to `.env.local`
-
-### Local MongoDB
-
-1. Install MongoDB locally
-2. Update `MONGODB_URI` in `.env.local` to:
-   ```
-   mongodb://localhost:27017/tripnowa
-   ```
-
-## 🌐 Deployment
-
-### Frontend → Vercel
-
-1. **Push your code to GitHub**
-
-2. **Deploy to Vercel**:
-   - Go to [Vercel](https://vercel.com)
-   - Import your GitHub repository
-   - Add environment variables:
-     - `MONGODB_URI`
-     - `JWT_SECRET`
-     - `NODE_ENV=production`
-   - Deploy!
-
-### Database → MongoDB Atlas
-
-- Already cloud-based, no additional deployment needed
-- Ensure your Vercel deployment IP is whitelisted in MongoDB Atlas
-
-## 📝 Default Admin Account
-
-After seeding the database, you can log in with:
-
-- **Email**: `admin@tripnowa.com`
-- **Password**: `admin123`
-
-**⚠️ Important**: Change the admin password after first login in production!
-
 ## 🔐 API Routes
 
 ### Authentication
